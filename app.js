@@ -17,6 +17,7 @@ var app = new Vue({
 
       //Request para pasar contenido del escaneo a la API de miarroba.
       $.post('qrapi.webcindario.com/?pag=API&pro=capture&op=insert_qr_scam', {ced_ide_usuario: var_user[3], chorizo:content}, function(resp){
+        alert(resp);
         if(resp == '1'){
           $("#alert_scan_qr").addClass('alert-success');
           $("#alert_scan_qr>p").text('Escaneo realizado con exito.');
